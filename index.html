@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falandou - Você Falandou HOJE!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="logo-section">
+                <h1 class="logo">Falandou</h1>
+                <p class="logo-subtitle">Você Falandou HOJE!</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="registration" class="form-label">Registro do Aluno</label>
+                    <input type="text" id="registration" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full-width">Entrar</button>
+                <div id="loginError" class="error-message hidden"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tela de Plano Expirado -->
+    <div id="expiredPlanScreen" class="expired-plan-screen hidden">
+        <div class="expired-plan-container">
+            <div class="expired-plan-content">
+                <div class="expired-plan-icon">
+                    ⚠️
+                </div>
+                <h1 class="expired-plan-title">Plano Expirado</h1>
+                <p class="expired-plan-message">
+                    Seu acesso ao curso expirou. Não se preocupe, seu saldo de aulas continua o mesmo.
+                    Entre em contato conosco para renovar e continuar acessando o conteúdo do curso.
+                </p>
+                
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">💬</span>
+                            <div class="contact-text">
+                                <strong>WhatsApp:</strong>
+                                <a href="https://wa.me/5511971419047" target="_blank">+55 11 97141-9047</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expired-plan-actions">
+                    <button id="logoutFromExpiredBtn" class="btn btn--outline">
+                        ← Voltar ao Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aplicação Principal - Menu - Painel Principal - Dashboard -->
+    <div id="mainApp" class="main-app hidden">
+        <header class="header">
+            <div class="header-content">
+                <nav class="nav-tabs">
+                        <button class="nav-tab active" data-tab="dashboard">📊 Início</button>
+                        <button class="nav-tab" data-tab="activities">📚 Atividades</button>
+                        <button class="nav-tab" data-tab="estudos">📖 Estudos</button>
+                        <button id="cursoTab" class="nav-tab" data-tab="curso">🎥 Curso</button>
+                        <button class="nav-tab" data-tab="schedule">📅 Cronograma</button>
+                        <button id="professorTab" class="nav-tab hidden" data-tab="professor">👨‍🏫 Área do Professor</button>
+                        <button class="nav-tab" data-tab="profile">👤 Perfil</button>
+                </nav>
+                <div class="header-user">
+                    <span id="userName" class="user-name"></span>
+                    <button id="logoutBtn" class="btn btn--outline btn--sm">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Início Tab -->
+            <div id="dashboard" class="tab-content active">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Que bom te ver aqui!</h3>
+                            <p></p>
+                            <p id="welcomeMessage"></p>
+                            <p>Os dados da plataforma são atualizados diariamente às 00h, exceto aos sábados.</p>
+                            <p>🚨 Foram adicionados 22 novos PDFs na aba Estudos - B2-C2</p>
+                            <p></p>
+                            <p>Já está disponível a primeira videoaula do curso Falandou Inglês🚀
+                            <p>As aulas estarão no formato podcast: você vai aprender com diálogos reais, músicas e filmes indo para o trabalho, na academia, ouvindo onde quiser!</p>
+
+                            <p>✔️Para ouvir a aula entre no "Acesso do Aluno", acesse "Curso", e aproveite: "Presenting Yourself" já está esperando por você!</p>
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <!-- Créditos -->
+                            <h3>Suas Aulas Disponíveis</h3>
+                            <p></p>
+                            <div class="credits-info">
+                                <div class="credit-item">
+                                    <span class="credit-label">Aulas de 25min:</span>
+                                    <span id="credits25" class="credit-value">0</span>
+                                </div>
+                                <div class="credit-item">
+                                    <span class="credit-label">Aulas de 50min:</span>
+                                    <span id="credits50" class="credit-value">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Status do Plano🚨</h3>
+                            <p></p>
+                            <div class="plan-info">
+                                <span id="planStatus" class="status status--success">Ativo</span>
+                                <p>Expira em: <span id="planExpiry"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities Tab -->
+            <div id="activities" class="tab-content">
+                <div class="activities-container">
+                    <h2>Vamos Usar a Mente</h2>
+                    <p></p>
+                    
+                    <div class="featured-activity">
+                        <h3>The Incredible Memory Palace: How Your Brain Stores Memories🧠</h3>
+                        
+                        <div class="story-section">
+                            <h4>By Marcus Thompson</h4>
+                            <div class="story-text">
+                                <p>Have you ever wondered why you can remember a song from years ago but forget what you had for lunch yesterday? I'll explain this fascinating quirk of our minds.</p>
+                                <p>Your brain works like a magical storage room. When you learn something new, your brain creates special connections between nerve cells called neurons.</p>
+                                <p>The more you repeat something, like singing a song over and over, the stronger these connections become. This is why familiar things stick in your memory better than random information.</p>
+                                <p>Here's the amazing part: I realized that our brains don't store memories like videos. Instead, they store patterns and associations. When you connect a memory to a strong emotion, a place, or a song, your brain tags it as important and holds onto it tightly.</p>
+                                <p>That's why I remember exactly where I was during special moments in my life, but everyday details fade away. Your brain is actually working perfectly, it's just prioritizing what matters most to you.</p>
+                            </div>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h4>😝 Hora do Quiz</h4>
+                            <div class="quiz-container">
+                                <!-- Pergunta 1 -->
+                                <div class="question">
+                                    <h5>1. What do nerve cells in your brain form when you learn something new?</h5>
+                                    <div class="options">
+                                        <button class="option-btn" data-question="1" data-answer="a">A) Muscle fibers</button>
+                                        <button class="option-btn" data-question="1" data-answer="b">B) Special connections called neurons</button>
+                                        <button class="option-btn" data-question="1" data-answer="c">C) Blood vessels</button>
+                                        <button class="option-btn" data-question="1" data-answer="d">D) Fat deposits</button>
+                                    </div>
+                                </div>
+
+                                <!-- Pergunta 2 -->
+                                <div class="question">
+                                    <h5>2. Why do you remember a song better than what you ate for lunch?</h5>
+                                    <div class="options">
+                                        <button class="option-btn" data-question="2" data-answer="a">A) Songs are longer than meals</button>
+                                        <button class="option-btn" data-question="2" data-answer="b">B) You repeat songs more often, making brain connections stronger</button>
+                                        <button class="option-btn" data-question="2" data-answer="c">C) Your brain only stores music</button>
+                                        <button class="option-btn" data-question="2" data-answer="d">D) Lunches don't create memories</button>
+                                    </div>
+                                </div>
+
+                                <!-- Pergunta 3 -->
+                                <div class="question">
+                                    <h5>3. How does your brain prioritize which memories to keep?</h5>
+                                    <div class="options">
+                                        <button class="option-btn" data-question="3" data-answer="a">A) It saves everything equally/button>
+                                        <button class="option-btn" data-question="3" data-answer="b">B) It forgets information immediately</button>
+                                        <button class="option-btn" data-question="3" data-answer="c">C) It tags memories connected to emotions, places, or songs as important</button>
+                                        <button class="option-btn" data-question="3" data-answer="d">D) It only remembers school subjects</button>
+                                    </div>
+                                </div>
+
+                                <!-- Pergunta 4 -->
+                                <div class="question">
+                                    <h5>4. What does your brain NOT store like?</h5>
+                                    <div class="options">
+                                        <button class="option-btn" data-question="4" data-answer="a">A) A magical storage room</button>
+                                        <button class="option-btn" data-question="4" data-answer="b">B) Patterns and associations</button>
+                                        <button class="option-btn" data-question="4" data-answer="c">C) A video recording</button>
+                                        <button class="option-btn" data-question="4" data-answer="d">D) A connected network</button>
+                                    </div>
+                                </div>
+
+                                <!-- Pergunta 5 -->
+                                <div class="question">
+                                    <h5>5. Given that your brain strengthens neural connections through repetition and prioritizes memories linked to emotions, places, and meaningful experiences, what comprehensive strategy would optimize long-term retention of complex information?</h5>
+                                    <div class="options">
+                                        <button class="option-btn" data-question="5" data-answer="a">A) Reading information once quickly guarantees memory storage</button>
+                                        <button class="option-btn" data-question="5" data-answer="b">B) Combining repeated exposure with emotional engagement and environmental context creates stronger, more retrievable memories</button>
+                                        <button class="option-btn" data-question="5" data-answer="c">C) Forgetting details proves your brain works perfectly</button>
+                                        <button class="option-btn" data-question="5" data-answer="d">D) Only special moments deserve to be remembered permanently</button>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-actions">
+                                    <button id="checkAnswers" class="btn btn--primary">Verificar Respostas</button>
+                                    <button id="resetQuiz" class="btn btn--secondary">Reiniciar Quiz</button>
+                                </div>
+
+                                <div id="quizResults" class="quiz-results hidden">
+                                    <h4>Resultados do Quiz</h4>
+                                    <div id="scoreDisplay" class="score-display"></div>
+                                    <div id="xpEarned" class="xp-earned"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estudos Tab -->
+            <div id="estudos" class="tab-content">
+                <div class="estudos-container">
+                    <h2>Conteúdo das Aulas</h2>
+                    <p></p>
+                    
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="Iniciante">Comece por aqui</button>
+                        <button class="category-tab" data-category="Elementar">Elementar</button>
+                        <button class="category-tab" data-category="Intermediario">Intermediário</button>
+                        <button class="category-tab" data-category="Avancado">Avançado</button>
+                        <button class="category-tab" data-category="Proficiente">Proficiente</button>
+                        <!-- <button class="category-tab" data-category="Aquilo">Aquilo Que Você Quer</button>
+                        <button class="category-tab" data-category="assuntospolemicos">Assuntos Polêmicos</button> -->
+                    </div>
+
+                    <div class="study-materials-grid">
+                        <!-- A1-A2 Comece por aqui -->
+                        <div id="Iniciante" class="material-category active">
+                            <h3>A1-A2</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>1 - Presenting Yourself</h4>
+                                        <p>Sharing basic personal details</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1hPLBrMiorcoC4NFyxEF0Kbcu3mptDqh8">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>2 - Personal Possessions</h4>
+                                        <p>Talking about items you own using simple vocabulary</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1L3T3vk_ZJsh1XnjbUo1GA4ZEOqaeBoL1">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>3 - Everyday Activities</h4>
+                                        <p>Describing daily habits with basic present tense</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="18IZ4LAKcE9_M5bJ1EZkXaIYR-nnp_T66">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>4 - Daily Schedule</h4>
+                                        <p>Discussing regular routines with simple time expressions</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1thLzq799BMliUXb5QJteSiAe87UcBIeO">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>5 - Meals and Drinks</h4>
+                                        <p>Naming foods and expressing basic preferences</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1u_K5M5LDp3ZStde634-2ZnhBPMqA1EQj">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>6 - City Locations</h4>
+                                        <p>Identifying common places with basic prepositions</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1QdSi9KZqMs0OFgB5fhI842mjUBqrmf30">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>7 - Mall Stores</h4>
+                                        <p>Discussing shops and basic shopping interactions</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="11tgbUPS4g5cPBQgaeJ2I1PbbJlSGAq1u">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>8 - Weather Conditions</h4>
+                                        <p>Describing weather using simple terms</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1pnp-QvU97fF4kqxx53pBefc21KzbrqbD">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>9 - Telling Time</h4>
+                                        <p>Expressing time and basic scheduling</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1_LA7S6qrx9YH0CXESqO2W-PGBPj5tddi">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>10 - Times of the Year</h4>
+                                        <p>Naming seasons and using simple descriptive adjectives</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1FN60TaQuUnsTiocFt4_FBJWKFtfKJIQ7">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>11 - Household Tasks</h4>
+                                        <p>Talking about chores like cleaning or cooking with basic verbs</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1v__hOveEC5hdBvkDbdnnpj-WsnogOnzF">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>12 - Casual Conversation</h4>
+                                        <p>Using greetings and polite phrases for brief exchanges</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1XRVspWQwXFMyWclIJXGP6urDhaMBCDfR">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>13 - Purchasing Clothing</h4>
+                                        <p>Engaging in simple shopping dialogues for clothes</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1lOYfcOjqcXCcR3NIf_-g3AV0ulZAg4iW">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>14 - Supermarket Shopping</h4>
+                                        <p>Describing grocery shopping with basic vocabulary</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1-osQBPjYs7sFlxmV4xzqLXDxJ9GSyiem">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>15 - Dining Out</h4>
+                                        <p>Ordering food and making simple requests in a restaurant</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="169TKrSwHfKtFXM0-29WnGaIaDeH93flR">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>16 - Beach Outings</h4>
+                                        <p>Talking about beach activities with simple descriptions</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="12pO0ucF7bMvOq7fpU8MxBajIfOEC37Ej">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>17 - Physical Activities</h4>
+                                        <p>Naming sports and describing basic participation</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1FLbEuwZh5t5-HM5Lyiyk1SJ1czkIt0NH">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>18 - Classroom Life</h4>
+                                        <p>Discussing school activities and basic academic terms</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1JfQ4_kR2fTW3YwH_V8ClvVzPotBQm42C">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>19 - University Life</h4>
+                                        <p>Talking about college routines with slightly more detail</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1SjxhCYruDcOz7uUSVICUS3ye4-Ka-yj1">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>20 - Wellness</h4>
+                                        <p>Describing basic health conditions and needs</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1h1oFrRygug5qflPYbS60DtH25lQIDKMh">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>21 - Frequent Illnesses</h4>
+                                        <p>Naming common ailments with simple explanations</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1x2No_4csaDweRwaqQS_iG7J-8WyxiDWQ">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>22 - Likes and Dislikes</h4>
+                                        <p>Expressing preferences with basic reasoning</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="14NTzLNXD9Q8blC3BQFeYCwTgKEL7wvM0">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>23 - Relationships with Friends</h4>
+                                        <p>Describing friends using simple adjectives</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1gJ416UoCq6SH5Y3ldoMlip1w7Ry3S1O_">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>24 - Extending Invitations</h4>
+                                        <p>Inviting others with basic phrases and responses</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1zh7S1I30BRW_gdbERj22bFqCSgmPvhVB">Ver</button>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- B1 Elementar -->
+                        <div id="Elementar" class="material-category">
+                            <h3>B1</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>25 - Characterizing Objects</h4>
+                                        <p>Describing items with detailed adjectives and connectors</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1rbvGB8AMBjA9brj_QGyAuK4uSkP8eNIh">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>26 - Films</h4>
+                                        <p>Discussing movie genres and simple plot summaries</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1n7FibP-Hdzs2JkbMpkcUHkZMP5JGdYTr">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>27 - Television and Cinema</h4>
+                                        <p>Talking about TV shows and movies with broader vocabulary</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1JuiiYslSjeEojxzg-4fWdpQ9Bsbm_N18">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>28 - Natural World</h4>
+                                        <p>Describing landscapes or animals with moderate detail</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1ZftSNk2g-VbTvw9q-z6Uyd81u9RQ_HHy">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>29 - Sightseeing Spots</h4>
+                                        <p>Talking about tourist attractions with cultural context</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1E0JeSf9tY9825J6FSFV-SCaYP3HwEe7M">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>30 - Traveling</h4>
+                                        <p>Discussing travel experiences using past and future tenses</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1qCpv0SgndtR6aIJv3TqPTvFISZGJu378">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>31 - Journeys</h4>
+                                        <p>Narrating specific trips with descriptive language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1F5jvQYs342cS-WG5mbCsVrJeztzmzIZt">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>32 - Festive Occasions</h4>
+                                        <p>Describing holidays and traditions with some detail</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1z6FbJotGim2FpNiigpWTndMtgS9K5wjR">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>33 - Memorable Events</h4>
+                                        <p>Talking about special days like birthdays with richer language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1OVX8tmZlkAKjjuqp6wFKyb2M9hraWvkt">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>34 - Organizing a Celebration</h4>
+                                        <p>Planning events with suggestions and future tenses</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1D6FDLsWJywyQx1XsPjbTlnjbD-vjch4I">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>35 - Online Platforms</h4>
+                                        <p>Discussing social media habits and platforms</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1thNc_JgbfuEes_Bs3gGvlwKdxLKoTLDl">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>36 - Professions</h4>
+                                        <p>Describing jobs and responsibilities with some detail</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1iXXKePn1zbx8jp6SaMu3E_urK1GF9uIo">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>37 - Work Life</h4>
+                                        <p>Talking about workplace routines and challenges</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1hiZb6TypRsM3MR1WlgzXfuxb11QE-7dw">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>38 - Irregular Verb Usage</h4>
+                                        <p>Applying common irregular verbs in various tenses</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1IheCcVug_S-9nLf9s6HcqaimWf9snwNC">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>39 - Past Events</h4>
+                                        <p>Narrating experiences using past simple and continuous</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="11oSDvf2JqbCVD1dj87X5Ghf2TyuRR15T">Ver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- B2 Intermediário -->
+                        <div id="Intermediario" class="material-category">
+                            <h3>B2</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>40 - Offering Suggestions</h4>
+                                        <p>Providing advice with modals and justifications</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1qxGN5NjoAQ9w_pDnb5u9SjgLQLLKC33Q">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>41 - Describing Health Issues</h4>
+                                        <p>Explaining symptoms in detail for medical contexts</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1XcYKEWaLVvkjFoS0G7CJMzRgDqUbBfhm">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>42 - Renting a Home</h4>
+                                        <p>Discussing housing agreements with hypothetical language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1g7SkcVGQ4iMzky5Xmn7KaMqVOMdPio24">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>43 - Learning and Education</h4>
+                                        <p>Talking about educational systems or experiences</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1Xoc6ME_BE0P2EgYYyNwcJffjZy1UEwMH">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>44 - Future Goals</h4>
+                                        <p>Discussing plans with conditionals and future forms</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1plm0RTDBnX5tFW4ZGWI5L_hb1glg7Tcd">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>45 - Life Stories</h4>
+                                        <p>Sharing personal experiences with varied tenses</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1HxqbKBVGmYqeTiIeVJEDlVJ72VJaaegb">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>46 - Aspirations</h4>
+                                        <p>Talking about dreams or hypothetical scenarios</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1MPj7QXOzervEQdyN2MrkgdVNd-PNigvQ">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>47 - Employment Interviews</h4>
+                                        <p>Using formal language for job interview scenarios</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1EVcS05I6KB2FadNULLprgyf241k8XMov">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>48 - Hypothetical Situations</h4>
+                                        <p>Using conditionals for imagined scenarios</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="16qOAUZTQ654mVfdF3-1irqAKOUEmGRsa">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>49 - Discussing Outcomes</h4>
+                                        <p>Talking about results with cause-and-effect language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1vDsEokPQxYY9t0g1XS7Nuz1obUn8LYOf">Ver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- C1 Avançado -->
+                        <div id="Avancado" class="material-category">
+                            <h3>C1</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>50 - Professional Meetings</h4>
+                                        <p>Using formal language for business discussions</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1AHtsOG-9GTxJSHtYolFTnbDW11dsj_eu">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>51 - Career</h4>
+                                        <p>Describing workplace dynamics with nuanced vocabulary</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1WN4qbkYjKQ_l8Qgz_0Y5jKG8htT4AsqR">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>52 - Workplace Successes</h4>
+                                        <p>Discussing professional achievements in detail</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1x5ufQz3ElgX0d99IZ8fKfrV83moToM03">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>53 - Academic Accomplishments</h4>
+                                        <p>Talking about college successes with complex language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1eH5Lw8_y2DdygAhQysYfsqJ-9NFXKjn8">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>54 - Giving Presentations</h4>
+                                        <p>Delivering or describing formal presentations</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="15wiZP9-MgFBzGbTwAE3pqV3daQLdGRHt">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>55 - Expectant Parenthood</h4>
+                                        <p>Discussing pregnancy with specialized vocabulary</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1xAwzmi_V2znzjYTgFYrG_FiutECvSrvx">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>56 - Logical Reasoning</h4>
+                                        <p>Making deductions with advanced modals and structures</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1mCbOTfi14wQoTL7SvdQTjBxjB1E4rfEJ">Ver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- C2 Proficiente -->
+                        <div id="Proficiente" class="material-category">
+                            <h3>C2</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>57 - Self-Reflection</h4>
+                                        <p>Exploring personal identity with abstract, nuanced language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1QS5IGYs4QwxpPHicd0iI7nq4JNgZozD8">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>58 - Dining Areas</h4>
+                                        <p>Discussing complex social interactions in food courts</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1HqxxiJQbTY3PEIMBcuTPO1IcHh-mPCCU">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>59 - Cultural Heritage</h4>
+                                        <p>Analyzing personal or societal cultural influences</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1pNZLke5_6k2-Wh9Z3gPgkuBkFiTOk75x">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>60 - World Challenges</h4>
+                                        <p>Debating global issues like climate or geopolitics with specialized terms</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1iGBteM9pOxZxUalA7Jrh-ImeTEZZJvGy">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>61 - Moral Questions</h4>
+                                        <p>Discussing ethical dilemmas with complex reasoning</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="/11XrmIsr_gXBgLZ-E3fytFxUdRcKMYsSg">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>62 - Philosophical Ideas</h4>
+                                        <p>Exploring abstract beliefs or ideologies with precision</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1AHzvyCIv8MpPyOVnkZsii47xqpudK3_c">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>63 - Cross-Cultural Interactions</h4>
+                                        <p>Analyzing intercultural dynamics with nuance</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1y6rgdOLId3jJRXWRmCmLyCQqRhkGLEi2">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>64 - Literary Criticism</h4>
+                                        <p>Discussing themes and symbolism in literature</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1_m_If93Q_MF11B9kSfdwXT_uFECMQKku">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>65 - Business Planning</h4>
+                                        <p>Talking about corporate strategies with formal language</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1DDCkENGmNA04vL31NBdqoCmF19WTpYJg">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>66 - Psychological Insights</h4>
+                                        <p>Exploring concepts like cognitive biases with specialized vocabulary</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1BFq3iYVX93XWGaORKM7Vm76YhGYS6jGl">Ver</button>
+                                </div>
+                                <!-- <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>Phrasal Verbs Guide</h4>
+                                        <p>Guia completo de phrasal verbs</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="LINK">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>Phrasal Verbs Guide</h4>
+                                        <p>Guia completo de phrasal verbs</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="LINK">Ver</button>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- aquilo que você quer -->
+                        <div id="Aquilo" class="material-category">
+                            <h3>Procurando Algo Diferente?</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>Phrasal Verbs Guide</h4>
+                                        <p>Guia completo de phrasal verbs</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE12pms">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>Idioms and Expressions</h4>
+                                        <p>Expressões idiomáticas mais usadas</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE13pms">Ver</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Assuntos Polêmicos -->
+                        <div id="assuntospolemicos" class="material-category">
+                            <h3>Assuntos Acalorados🔥</h3>
+                            <div class="material-list">
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>Phrasal Verbs Guide</h4>
+                                        <p>Guia completo de phrasal verbs</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE12pms">Ver</button>
+                                </div>
+                                <div class="material-item">
+                                    <div class="material-info">
+                                        <h4>Idioms and Expressions</h4>
+                                        <p>Expressões idiomáticas mais usadas</p>
+                                    </div>
+                                    <button class="btn btn--primary btn--sm material-btn" data-file-id="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE13pms">Ver</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <!-- PDF Viewer -->
+                    <div id="pdfViewer" class="pdf-viewer hidden">
+                        <div class="pdf-header">
+                            <h4 id="pdfTitle">Documento PDF</h4>
+                            <button id="closePdf" class="btn btn--secondary btn--sm">✖ Fechar</button>
+                        </div>
+                        <div class="pdf-content">
+                            <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso Tab -->
+            <div id="curso" class="tab-content">
+                <div id="cursoExpiredWarning" class="expired-warning hidden">
+                    <div class="expired-warning-content">
+                        <div class="expired-warning-icon">🔒</div>
+                        <h3>Acesso Restrito</h3>
+                        <p>Seu acesso ao curso expirou. Não se preocupe, seu saldo de aulas continua o mesmo. Entre em contato conosco para renovar e continuar acessando o conteúdo do curso.</p>
+                        <div class="contact-info-brief">
+                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511971419047" target="_blank">+55 11 97141-9047</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:contato@falandou.com.br">contato@falandou.com.br</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="cursoContent" class="curso-container">
+                    <h2>🎥 Curso Falandou Inglês</h2>
+                    <p></p>
+                    <div class="course-modules" id="courseModules">
+                        <!-- Course modules will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Video Modal -->
+                    <div id="videoModal" class="video-modal hidden">
+                        <div class="modal-overlay"></div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 id="modalVideoTitle">Título do Vídeo</h3>
+                                <button id="closeVideoModal" class="btn btn--secondary btn--sm">✖ Fechar</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="video-container">
+                                    <iframe id="videoFrame" src="" frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen></iframe>
+                                </div>
+                                <div class="video-info">
+                                    <p id="modalVideoDescription">Descrição do vídeo</p>
+                                    <div class="video-meta">
+                                        <span id="modalVideoDuration">Duração</span> • 
+                                        <span id="modalVideoDifficulty" class="difficulty-badge">Nível</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Tab -->
+            <div id="schedule" class="tab-content">
+                <div class="schedule-container">
+                    <h2>Cronograma Semanal</h2>
+                    <p></p>
+                    <div id="scheduleList" class="schedule-list">
+                        <!-- Schedule items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professor Tab -->
+            <div id="professor" class="tab-content">
+                <div class="professor-container">
+                    <h2>👨‍🏫 Área do Professor</h2>
+                    
+                    <div class="professor-stats">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">👥</div>
+                                <div class="stat-info">
+                                    <div class="stat-value" id="totalStudentsCount">0</div>
+                                    <div class="stat-label">Alunos Ativos</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">⏰</div>
+                                <div class="stat-info">
+                                    <div class="stat-value" id="totalHoursCount">0</div>
+                                    <div class="stat-label">Horas Totais</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="professor-filters">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">Todas as Aulas</button>
+                        </div>
+                    </div>
+
+                    <div class="professor-schedule">
+                        <h3>📋 Cronograma de Aulas</h3>
+                        <div id="professorScheduleList" class="professor-schedule-list">
+                            <!-- Professor schedule items will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Profile Tab -->
+            <div id="profile" class="tab-content">
+                <div class="profile-container">
+                    <h2>Perfil do Usuário</h2>
+                    <p></p>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="profile-info">
+                                <div class="info-item">
+                                    <label>Nome:</label>
+                                    <span id="profileName"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Email:</label>
+                                    <span id="profileEmail"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Matrícula:</label>
+                                    <span id="profileRegistration"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Tipo de Usuário:</label>
+                                    <span id="profileUserType"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Status do Plano:</label>
+                                    <span id="profilePlanStatus" class="status status--success"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Expiry:</label>
+                                    <span id="profilePlanExpiry"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
