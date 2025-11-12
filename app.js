@@ -330,21 +330,6 @@ const masterSchedule = [
             },
             {   //Gabriel Arruda - 104 - N 6
                 id: "class_008",
-                date: "2025-11-12T00:00:00",
-                //date: "2025-11-12",
-                day: "Quarta-feira",
-                time: "9:30",
-                timezone: "Brasília",
-                topic: "6 - City Locations",
-                professor: "Prof. Adriel Pelegrino",
-                student: "Gabriel Arruda",
-                studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-            {   //Gabriel Arruda - 104 - N 6
-                id: "class_008",
                 date: "2025-11-14T00:00:00",
                 //date: "2025-11-14",
                 day: "Sexta-feira",
@@ -437,8 +422,8 @@ const courseData = {
                     id: "lesson1",
                     title: "1 - Presenting Yourself",
                     description: "Sharing basic personal details",
-                    videoId: "1133952679",
-                    duration: "19:38",
+                    videoId: "1135964921",
+                    duration: "28:29",
                     difficulty: "basico",
                     status: "available"
                 },
