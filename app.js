@@ -420,7 +420,7 @@ const courseData = {
                // },
                 {
                     id: "lesson1",
-                    title: "1 - Presenting Yourself",
+                    title: "1 - Presenting Yourself - Podcast Style",
                     description: "Sharing basic personal details",
                     videoId: "1135964921",
                     duration: "28:29",
@@ -436,16 +436,16 @@ const courseData = {
                     difficulty: "intermediario",
                     status: "available"
                 },
-                /*{
-                    id: "lesson2",
-                    title: "2 - Personal Possessions",
-                    description: "Talking about items you own using simple vocabulary",
-                    videoId: "dQw4w9WgXcQ",
-                    duration: "50:07",
-                    difficulty: "basico",
+                {
+                    id: "lesson3",
+                    title: "What If You Detonated a Nuclear Bomb In Rio de Janeiro - Mini Documentaries",
+                    description: "What Would Happen If a Nuclear Bomb Exploded in Rio de Janeiro?",
+                    videoId: "1136589727",
+                    duration: "06:31",
+                    difficulty: "avancado",
                     status: "available"
                 },
-                {
+                /*{
                     id: "lesson2",
                     title: "3 - Everyday Activities",
                     description: "Describing daily habits with basic present tense",
@@ -2113,7 +2113,7 @@ function initializeUserProgress() {
     // Initialize user progress - for demo purposes, some lessons are unlocked
     userProgress = {
         completedLessons: [],
-        unlockedLessons: ['lesson1', 'lesson2'] // First two lessons unlocked by default
+        unlockedLessons: ['lesson1', 'lesson2', 'lesson3'] // First two lessons unlocked by default
     };
 }
 
