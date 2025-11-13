@@ -89,7 +89,7 @@ const studentsDatabase = [
         },
         weekly_schedule: []
     },
-    {   //Nelsita de Contoe - 103
+    {   //Nelsita de Conto - 103
         id: 103,
         registration_number: "103",
         password: "deconto2928",
@@ -103,16 +103,16 @@ const studentsDatabase = [
             "50_min_classes": 136
         },
         weekly_schedule: [
-            {   //Nelsita de Contoe - 103 - N 1
+            {   //Nelsita de Conto - 103 - N 1
                 //id: "class_008",
                 //date: "2025-11-13T00:00:00",
                 date: "2025-11-13",
-                day: "Quarta-feira",
+                day: "Quinta-feira",
                 time: "19:00",
                 timezone: "Brasília",
                 topic: "1 - Presenting Yourself",
                 professor: "Ysabelle Davanse",
-                //student: "Nelsita de Contoe - 103",
+                //student: "Nelsita de Conto - 103",
                 //studentId: 103,
                 duration: "50min",
                 status: "scheduled",
@@ -356,7 +356,7 @@ const masterSchedule = [
                 id: "class_200001",
                 date: "2025-11-13T00:00:00",
                 //date: "2025-11-13",
-                day: "Quarta-feira",
+                day: "Quinta-feira",
                 time: "19:00",
                 timezone: "Brasília",
                 topic: "1 - Presenting Yourself",
