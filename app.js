@@ -117,23 +117,7 @@ const studentsDatabase = [
             "25_min_classes": 0,
             "50_min_classes": 5
         },
-        weekly_schedule: [
-            {   //Gabriel Arruda - 104 - N 6
-                //id: "class_008",
-                //date: "2025-11-14T00:00:00",
-                date: "2025-11-14",
-                day: "Sexta-feira",
-                time: "9:30",
-                timezone: "Brasília",
-                topic: "Continuação: 6 - City Locations",
-                professor: "Adriel Pelegrino",
-                //student: "Gabriel Arruda",
-                //studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-        ]
+        weekly_schedule: []
     },
     {   //Emanuella Albuquerque - 105 - N 3
         id: 105,
