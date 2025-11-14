@@ -102,23 +102,7 @@ const studentsDatabase = [
             "25_min_classes": 0,
             "50_min_classes": 136
         },
-        weekly_schedule: [
-            {   //Nelsita de Conto - 103 - N 1
-                //id: "class_008",
-                //date: "2025-11-13T00:00:00",
-                date: "2025-11-13",
-                day: "Quinta-feira",
-                time: "19:00",
-                timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
-                professor: "Ysabelle Davanse",
-                //student: "Nelsita de Conto - 103",
-                //studentId: 103,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
-        ]
+        weekly_schedule: []
     },
     {   //Gabriel Arruda - 104 - N 6
         id: 104,
@@ -134,21 +118,6 @@ const studentsDatabase = [
             "50_min_classes": 5
         },
         weekly_schedule: [
-            {   //Gabriel Arruda - 104 - N 6
-                //id: "class_008",
-                //date: "2025-11-12T00:00:00",
-                date: "2025-11-12",
-                day: "Quarta-feira",
-                time: "9:30",
-                timezone: "Brasília",
-                topic: "6 - City Locations",
-                professor: "Adriel Pelegrino",
-                //student: "Gabriel Arruda",
-                //studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
             {   //Gabriel Arruda - 104 - N 6
                 //id: "class_008",
                 //date: "2025-11-14T00:00:00",
@@ -179,23 +148,7 @@ const studentsDatabase = [
             "25_min_classes": 6,
             "50_min_classes": 0
         },
-        weekly_schedule: [
-            {   //Emanuella Albuquerque - 105
-                //id: "class_008",
-                //date: "2025-11-12T00:00:00",
-                date: "2025-11-12",
-                day: "Quarta-feira",
-                time: "14:00",
-                timezone: "Brasília",
-                topic: "Continuação: 3 - Everyday Activities",
-                professor: "Adriel Pelegrino",
-                //student: "Emanuella Albuquerque",
-                //studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-        ]
+        weekly_schedule: []
     },
     {
         id: 40000,
@@ -361,7 +314,7 @@ const masterSchedule = [
                 timezone: "Brasília",
                 topic: "1 - Presenting Yourself",
                 professor: "Prof. Ysabelle Davanse",
-                student: "Nelsita de Conto - 103",
+                student: "Ausente (DONE) Nelsita de Conto - 103",
                 studentId: 103,
                 duration: "50min",
                 status: "scheduled",
