@@ -1,6 +1,8 @@
 // Updated student database with multiple professors and complete schedule data
 const studentsDatabase = [
     // Professor users
+    // Professor users
+    // Professor users
     {
         //https://meet.google.com/yxk-wvhb-qgs
         id: 999,
@@ -130,6 +132,21 @@ const studentsDatabase = [
         plan_expiry: "2025-11-29",
         credits: {
             "25_min_classes": 6,
+            "50_min_classes": 0
+        },
+        weekly_schedule: []
+    },
+    {   //Ester Augusto - 106 - N 1
+        id: 105,
+        registration_number: "106",
+        password: "Augusto1254",
+        name: "Ester Augusto",
+        email: "Esteraugust.silva@gmail.com",
+        user_type: "student",
+        plan_status: "active",
+        plan_expiry: "2025-12-13",
+        credits: {
+            "25_min_classes": 3,
             "50_min_classes": 0
         },
         weekly_schedule: []
@@ -382,16 +399,16 @@ const courseData = {
                     difficulty: "avancado",
                     status: "available"
                 },
-                /*{
-                    id: "lesson2",
-                    title: "3 - Everyday Activities",
-                    description: "Describing daily habits with basic present tense",
-                    videoId: "dQw4w9WgXcQ",
-                    duration: "21:50",
+                {
+                    id: "lesson4",
+                    title: "2 - Personal Possessions",
+                    description: "Talking about items you own using simple vocabulary",
+                    videoId: "1137316413",
+                    duration: "35:38",
                     difficulty: "basico",
                     status: "available"
                 },
-                {
+                /*{
                     id: "lesson2",
                     title: "4 - Daily Schedule",
                     description: "Discussing regular routines with simple time expressions",
@@ -2050,7 +2067,7 @@ function initializeUserProgress() {
     // Initialize user progress - for demo purposes, some lessons are unlocked
     userProgress = {
         completedLessons: [],
-        unlockedLessons: ['lesson1', 'lesson2', 'lesson3'] // First two lessons unlocked by default
+        unlockedLessons: ['lesson1', 'lesson2', 'lesson3', 'lesson4'] // First two lessons unlocked by default
     };
 }
 
