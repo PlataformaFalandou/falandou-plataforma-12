@@ -114,12 +114,28 @@ const studentsDatabase = [
         email: "ghenrique.info@gmail.com",
         user_type: "student",
         plan_status: "active",
-        plan_expiry: "2025-11-02",
+        plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 5
+            "50_min_classes": 4
         },
-        weekly_schedule: []
+        weekly_schedule: [
+            {   //Gabriel Arruda - 104 - N 6 - City Locations
+                //id: "class_008",
+                //date: "2025-11-19T00:00:00",
+                date: "2025-11-19",
+                day: "Segunda-feira",
+                time: "09:30",
+                timezone: "Brasília",
+                topic: "Continuação: 6 - City Locations",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+        ]
     },
     {   //Emanuella Albuquerque - 105 - N 3
         id: 105,
@@ -283,8 +299,24 @@ const masterSchedule = [
     //SEMPRE COLOCAR UM DIA A MAIS PARAR O PROFESSOR (id do professor)
     //  -----------------------------------------------------------------------------------------------------------------
     
+            
+            {   //Gabriel Arruda - 104 - N 6 - City Locations
+                id: "class_100003",
+                date: "2025-11-19T00:00:00",
+                //date: "2025-11-19",
+                day: "Segunda-feira",
+                time: "09:30",
+                timezone: "Brasília",
+                topic: "Continuação: 6 - City Locations",
+                professor: "Prof. Adriel Pelegrino",
+                student: "Gabriel Arruda",
+                studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
             {   //Emanuella Albuquerque - 105 - 3
-                id: "class_100001",
+                id: "class_100002",
                 date: "2025-11-12T00:00:00",
                 //date: "2025-11-12",
                 day: "Quarta-feira",
@@ -299,7 +331,7 @@ const masterSchedule = [
                 meetLink: "https://meet.google.com/yxk-wvhb-qgs"
             },
             {   //Gabriel Arruda - 104 - N 6
-                id: "class_008",
+                id: "class_100001",
                 date: "2025-11-14T00:00:00",
                 //date: "2025-11-14",
                 day: "Sexta-feira",
@@ -321,19 +353,18 @@ const masterSchedule = [
     //password: "prof.YsabelleDavanse2362",
     //  -----------------------------------------------------------------------------------------------------------------
             
-            
-            {   //Nelsita de Conto - 103 - N 1
+            {   //Emanuella Albuquerque - 105
                 id: "class_200001",
-                date: "2025-11-13T00:00:00",
-                //date: "2025-11-13",
-                day: "Quinta-feira",
-                time: "19:00",
+                date: "2025-11-24T00:00:00",
+                //date: "2025-11-24",
+                day: "Segunda-feira",
+                time: "10:00",
                 timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
+                topic: "Continuação: 3 - Everyday Activities",
                 professor: "Prof. Ysabelle Davanse",
-                student: "Ausente (DONE) Nelsita de Conto - 103",
-                studentId: 103,
-                duration: "50min",
+                student: "Emanuella Albuquerque",
+                studentId: 105,
+                duration: "25min",
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
