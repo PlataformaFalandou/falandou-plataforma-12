@@ -131,10 +131,26 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2025-11-29",
         credits: {
-            "25_min_classes": 6,
+            "25_min_classes": 5,
             "50_min_classes": 0
         },
-        weekly_schedule: []
+        weekly_schedule: [
+            {   //Emanuella Albuquerque - 105
+                //id: "class_008",
+                //date: "2025-11-24T00:00:00",
+                date: "2025-11-24",
+                day: "Segunda-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "Continuação: 3 - Everyday Activities",
+                professor: "Prof. Ysabelle Davanse",
+                //student: "Emanuella Albuquerque",
+                //studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+        ]
     },
     {   //Ester Augusto - 106 - N 1
         id: 105,
