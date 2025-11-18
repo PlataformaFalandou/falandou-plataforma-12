@@ -423,7 +423,7 @@ const courseData = {
                     id: "lesson1",
                     title: "1 - Presenting Yourself - Podcast Style",
                     description: "Sharing basic personal details",
-                    videoId: "1135964921",
+                    videoId: "1138271809",
                     duration: "28:29",
                     difficulty: "basico",
                     status: "available"
@@ -432,7 +432,7 @@ const courseData = {
                     id: "lesson2",
                     title: "Immune System Explained - Mini Documentaries",
                     description: "The Hidden Army Inside You",
-                    videoId: "1134981882",
+                    videoId: "1138285708",
                     duration: "2:07",
                     difficulty: "intermediario",
                     status: "available"
@@ -441,7 +441,7 @@ const courseData = {
                     id: "lesson3",
                     title: "What If You Detonated a Nuclear Bomb In Rio de Janeiro - Mini Documentaries",
                     description: "What Would Happen If a Nuclear Bomb Exploded in Rio de Janeiro?",
-                    videoId: "1136589727",
+                    videoId: "1138285758",
                     duration: "06:31",
                     difficulty: "avancado",
                     status: "available"
@@ -453,6 +453,15 @@ const courseData = {
                     videoId: "1137316413",
                     duration: "35:38",
                     difficulty: "basico",
+                    status: "available"
+                },
+                {
+                    id: "lesson5",
+                    title: "How many lies do you tell a day - Mini Documentaries",
+                    description: "How Many Lies people Tell a Day",
+                    videoId: "1138292203",
+                    duration: "2:07",
+                    difficulty: "intermediario",
                     status: "available"
                 },
                 /*{
@@ -2114,7 +2123,7 @@ function initializeUserProgress() {
     // Initialize user progress - for demo purposes, some lessons are unlocked
     userProgress = {
         completedLessons: [],
-        unlockedLessons: ['lesson1', 'lesson2', 'lesson3', 'lesson4'] // First two lessons unlocked by default
+        unlockedLessons: ['lesson1', 'lesson2', 'lesson3', 'lesson4', 'lesson5'] // First two lessons unlocked by default
     };
 }
 
