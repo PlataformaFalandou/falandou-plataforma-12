@@ -423,6 +423,15 @@ const courseData = {
                 },
                 {
                     id: "lesson3",
+                    title: "2 - Personal Possessions - Podcast Style",
+                    description: "Talking about items you own using simple vocabulary",
+                    videoId: "1137316413",
+                    duration: "35:38",
+                    difficulty: "basico",
+                    status: "available"
+                },
+                {
+                    id: "lesson4",
                     title: "What If You Detonated a Nuclear Bomb In Rio de Janeiro - Mini Documentaries",
                     description: "What Would Happen If a Nuclear Bomb Exploded in Rio de Janeiro?",
                     videoId: "1138285758",
@@ -431,25 +440,16 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson4",
-                    title: "2 - Personal Possessions",
-                    description: "Talking about items you own using simple vocabulary",
-                    videoId: "1137316413",
-                    duration: "35:38",
-                    difficulty: "basico",
-                    status: "available"
-                },
-                {
                     id: "lesson5",
                     title: "How many lies do you tell a day - Mini Documentaries",
                     description: "How Many Lies people Tell a Day",
                     videoId: "1138292203",
-                    duration: "2:07",
+                    duration: "4:41",
                     difficulty: "intermediario",
                     status: "available"
                 },
-                /*{
-                    id: "lesson2",
+                {
+                    id: "lesson222",
                     title: "4 - Daily Schedule",
                     description: "Discussing regular routines with simple time expressions",
                     videoId: "dQw4w9WgXcQ",
@@ -458,7 +458,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "5 - Meals and Drinks",
                     description: "Naming foods and expressing basic preferences",
                     videoId: "dQw4w9WgXcQ",
@@ -467,7 +467,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "6 - City Locations",
                     description: "Identifying common places with basic prepositions",
                     videoId: "dQw4w9WgXcQ",
@@ -476,7 +476,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "7 - Mall Stores",
                     description: "Discussing shops and basic shopping interactions",
                     videoId: "dQw4w9WgXcQ",
@@ -485,7 +485,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "8 - Weather Conditions",
                     description: "Describing weather using simple terms",
                     videoId: "dQw4w9WgXcQ",
@@ -494,7 +494,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "9 - Telling Time",
                     description: "Expressing time and basic scheduling",
                     videoId: "dQw4w9WgXcQ",
@@ -503,7 +503,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "10 - Times of the Year",
                     description: "Naming seasons and using simple descriptive adjectives",
                     videoId: "dQw4w9WgXcQ",
@@ -512,7 +512,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "11 - Household Tasks",
                     description: "Talking about chores like cleaning or cooking with basic verbs",
                     videoId: "dQw4w9WgXcQ",
@@ -521,7 +521,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "12 - Casual Conversation",
                     description: "Using greetings and polite phrases for brief exchanges",
                     videoId: "dQw4w9WgXcQ",
@@ -530,7 +530,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "13 - Purchasing Clothing",
                     description: "Engaging in simple shopping dialogues for clothes",
                     videoId: "dQw4w9WgXcQ",
@@ -539,7 +539,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "14 - Supermarket Shopping",
                     description: "Describing grocery shopping with basic vocabulary",
                     videoId: "dQw4w9WgXcQ",
@@ -548,7 +548,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "15 - Dining Out",
                     description: "Ordering food and making simple requests in a restaurant",
                     videoId: "dQw4w9WgXcQ",
@@ -557,7 +557,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "16 - Beach Outings",
                     description: "Talking about beach activities with simple descriptions",
                     videoId: "dQw4w9WgXcQ",
@@ -566,7 +566,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "17 - Physical Activities",
                     description: "Naming sports and describing basic participation",
                     videoId: "dQw4w9WgXcQ",
@@ -575,7 +575,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "18 - Classroom Life",
                     description: "Discussing school activities and basic academic terms1",
                     videoId: "dQw4w9WgXcQ",
@@ -584,7 +584,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "19 - University Life",
                     description: "Talking about college routines with slightly more detail",
                     videoId: "dQw4w9WgXcQ",
@@ -593,7 +593,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "20 - Wellness",
                     description: "Describing basic health conditions and needs",
                     videoId: "dQw4w9WgXcQ",
@@ -602,7 +602,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "21 - Frequent Illnesses",
                     description: "Naming common ailments with simple explanations",
                     videoId: "dQw4w9WgXcQ",
@@ -611,7 +611,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "22 - Likes and Dislikes",
                     description: "Expressing preferences with basic reasoning",
                     videoId: "dQw4w9WgXcQ",
@@ -620,7 +620,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "23 - Relationships with Friends",
                     description: "Describing friends using simple adjectives",
                     videoId: "dQw4w9WgXcQ",
@@ -629,7 +629,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "24 - Extending Invitations",
                     description: "Inviting others with basic phrases and responses",
                     videoId: "dQw4w9WgXcQ",
@@ -638,7 +638,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "25 - Characterizing Objects",
                     description: "Describing items with detailed adjectives and connectors",
                     videoId: "dQw4w9WgXcQ",
@@ -647,7 +647,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "26 - Films",
                     description: "Discussing movie genres and simple plot summaries",
                     videoId: "dQw4w9WgXcQ",
@@ -656,7 +656,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "27 - Television and Cinema",
                     description: "Talking about TV shows and movies with broader vocabulary",
                     videoId: "dQw4w9WgXcQ",
@@ -665,7 +665,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "28 - Natural World",
                     description: "Describing landscapes or animals with moderate detail",
                     videoId: "dQw4w9WgXcQ",
@@ -674,7 +674,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "29 - Sightseeing Spots",
                     description: "Talking about tourist attractions with cultural context",
                     videoId: "dQw4w9WgXcQ",
@@ -683,7 +683,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "30 - Traveling",
                     description: "Discussing travel experiences using past and future tenses",
                     videoId: "dQw4w9WgXcQ",
@@ -692,7 +692,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "31 - Journeys",
                     description: "Narrating specific trips with descriptive language",
                     videoId: "dQw4w9WgXcQ",
@@ -701,7 +701,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "32 - Festive Occasions",
                     description: "Describing holidays and traditions with some detail",
                     videoId: "dQw4w9WgXcQ",
@@ -710,7 +710,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "33 - Memorable Events",
                     description: "Talking about special days like birthdays with richer language",
                     videoId: "dQw4w9WgXcQ",
@@ -719,7 +719,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "34 - Organizing a Celebration",
                     description: "Planning events with suggestions and future tenses",
                     videoId: "dQw4w9WgXcQ",
@@ -728,7 +728,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "35 - Online Platforms",
                     description: "Discussing social media habits and platforms",
                     videoId: "dQw4w9WgXcQ",
@@ -737,7 +737,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "36 - Professions",
                     description: "Describing jobs and responsibilities with some detail",
                     videoId: "dQw4w9WgXcQ",
@@ -746,7 +746,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "37 - Work Life",
                     description: "Talking about workplace routines and challenges",
                     videoId: "dQw4w9WgXcQ",
@@ -755,7 +755,7 @@ const courseData = {
                     status: "available"
                 },
                 {
-                    id: "lesson2",
+                    id: "lesson2222",
                     title: "38 - Irregular Verb Usage",
                     description: "Applying common irregular verbs in various tenses",
                     videoId: "dQw4w9WgXcQ",
@@ -772,7 +772,7 @@ const courseData = {
                     difficulty: "basico",
                     status: "available"
                 }
-            ]
+            /*]
         },
         {
             id: "modulo2",
