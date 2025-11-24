@@ -137,12 +137,27 @@ const studentsDatabase = [
         weekly_schedule: [
             {   //Emanuella Albuquerque - 105
                 //id: "class_008",
+                //date: "2025-11-26T00:00:00",
+                date: "2025-11-26",
+                day: "Quarta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "Continuação - 3 - Everyday Activities",
+                professor: "Prof. Ysabelle Davanse",
+                //student: "Emanuella Albuquerque",
+                //studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+            {   //Emanuella Albuquerque - 105
+                //id: "class_008",
                 //date: "2025-11-24T00:00:00",
                 date: "2025-11-24",
                 day: "Segunda-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "Continuação: 3 - Everyday Activities",
+                topic: "(Ausente)",
                 professor: "Prof. Ysabelle Davanse",
                 //student: "Emanuella Albuquerque",
                 //studentId: 105,
@@ -337,14 +352,30 @@ const masterSchedule = [
     //password: "prof.YsabelleDavanse2362",
     //  -----------------------------------------------------------------------------------------------------------------
             
+                
             {   //Emanuella Albuquerque - 105
+                id: "class_200002",
+                date: "2025-11-26T00:00:00",
+                //date: "2025-11-26",
+                day: "Quarta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "Continuação - 3 - Everyday Activities",
+                professor: "Prof. Ysabelle Davanse",
+                student: "Emanuella Albuquerque",
+                studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+                {   //Emanuella Albuquerque - 105
                 id: "class_200001",
                 date: "2025-11-24T00:00:00",
                 //date: "2025-11-24",
                 day: "Segunda-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "Continuação: 3 - Everyday Activities",
+                topic: "Ausente (Done)",
                 professor: "Prof. Ysabelle Davanse",
                 student: "Emanuella Albuquerque",
                 studentId: 105,
