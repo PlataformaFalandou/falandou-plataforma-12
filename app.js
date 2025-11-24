@@ -133,9 +133,40 @@ const studentsDatabase = [
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 4
+            "50_min_classes": 2
         },
-        weekly_schedule: []
+        weekly_schedule: [
+            {   //Gabriel Arruda - 104 - N 6
+                //id: "class_008",
+                //date: "2025-11-26T00:00:00",
+                date: "2025-11-26",
+                day: "Quarta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "Continuação - 6 - City Locations",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+            },
+            {   //Gabriel Arruda - 104 - N 6
+                //id: "class_008",
+                //date: "2025-11-28T00:00:00",
+                date: "2025-11-28",
+                day: "Quarta-feira",
+                time: "09:30",
+                timezone: "Brasília",
+                topic: "Continuação - 6 - City Locations",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+            },
+        ]
     },
     {   //Emanuella Albuquerque - 105 - N 3
         id: 105,
@@ -315,50 +346,36 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
     
             
-            {   //Gabriel Arruda - 104 - N 6 - City Locations
-                id: "class_100003",
-                date: "2025-11-19T00:00:00",
-                //date: "2025-11-19",
-                day: "Segunda-feira",
-                time: "09:30",
-                timezone: "Brasília",
-                topic: "Continuação: 6 - City Locations",
-                professor: "Prof. Adriel Pelegrino",
-                student: "Gabriel Arruda",
-                studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-            {   //Emanuella Albuquerque - 105 - 3
-                id: "class_100002",
-                date: "2025-11-12T00:00:00",
-                //date: "2025-11-12",
-                day: "Quarta-feira",
-                time: "14:00",
-                timezone: "Brasília",
-                topic: "Continuação: 3 - Everyday Activities",
-                professor: "Prof. Adriel Pelegrino",
-                student: "Emanuella Albuquerque",
-                studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
+            
             {   //Gabriel Arruda - 104 - N 6
                 id: "class_100001",
-                date: "2025-11-14T00:00:00",
-                //date: "2025-11-14",
-                day: "Sexta-feira",
-                time: "9:30",
+                date: "2025-11-26T00:00:00",
+                //date: "2025-11-26",
+                day: "Quarta-feira",
+                time: "16:00",
                 timezone: "Brasília",
-                topic: "Continuação: 6 - City Locations",
+                topic: "Continuação - 6 - City Locations",
                 professor: "Prof. Adriel Pelegrino",
                 student: "Gabriel Arruda",
                 studentId: 104,
                 duration: "50min",
                 status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+            },
+            {   //Gabriel Arruda - 104 - N 6
+                id: "class_100002",
+                date: "2025-11-28T00:00:00",
+                //date: "2025-11-28",
+                day: "Quarta-feira",
+                time: "09:30",
+                timezone: "Brasília",
+                topic: "Continuação - 6 - City Locations",
+                professor: "Prof. Adriel Pelegrino",
+                student: "Gabriel Arruda",
+                studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
             },
 
     // Prof. Ysabelle Davanse classes ONLY - id class_200001 ------------------------------------------------------------------------------
