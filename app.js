@@ -133,7 +133,7 @@ const studentsDatabase = [
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 2
+            "50_min_classes": 3
         },
         weekly_schedule: [
             {   //Gabriel Arruda - 104 - N 6
@@ -142,21 +142,6 @@ const studentsDatabase = [
                 date: "2025-11-26",
                 day: "Quarta-feira",
                 time: "16:00",
-                timezone: "Brasília",
-                topic: "Continuação - 6 - City Locations",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Gabriel Arruda",
-                //studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
-            },
-            {   //Gabriel Arruda - 104 - N 6
-                //id: "class_008",
-                //date: "2025-11-28T00:00:00",
-                date: "2025-11-28",
-                day: "Quarta-feira",
-                time: "09:30",
                 timezone: "Brasília",
                 topic: "Continuação - 6 - City Locations",
                 professor: "Prof. Adriel Pelegrino",
