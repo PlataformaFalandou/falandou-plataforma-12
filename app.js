@@ -168,7 +168,7 @@ const studentsDatabase = [
             },
         ]
     },
-    {   //Emanuella Albuquerque - 105 - N 3
+    {   //Emanuella Albuquerque - 105 - N 4
         id: 105,
         registration_number: "105",
         password: "Albuquerquea4474",
@@ -182,6 +182,22 @@ const studentsDatabase = [
             "50_min_classes": 0
         },
         weekly_schedule: [
+            
+            {   //Emanuella Albuquerque - 105
+                //id: "class_008",
+                //date: "2025-11-27T00:00:00",
+                date: "2025-11-27",
+                day: "Quinta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "4 - Daily Schedule",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Emanuella Albuquerque",
+                //studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
             {   //Emanuella Albuquerque - 105
                 //id: "class_008",
                 //date: "2025-11-26T00:00:00",
@@ -189,7 +205,7 @@ const studentsDatabase = [
                 day: "Quarta-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "Continuação - 3 - Everyday Activities",
+                topic: "(Concluída)",
                 professor: "Prof. Ysabelle Davanse",
                 //student: "Emanuella Albuquerque",
                 //studentId: 105,
@@ -346,7 +362,21 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
     
             
-            
+            {   //Emanuella Albuquerque - 105
+                id: "class_100003",
+                date: "2025-11-27T00:00:00",
+                //date: "2025-11-27",
+                day: "Quinta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "4 - Daily Schedule",
+                professor: "Prof. Adriel Pelegrino",
+                student: "Emanuella Albuquerque",
+                studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
             {   //Gabriel Arruda - 104 - N 6
                 id: "class_100001",
                 date: "2025-11-26T00:00:00",
@@ -385,22 +415,7 @@ const masterSchedule = [
     //password: "prof.YsabelleDavanse2362",
     //  -----------------------------------------------------------------------------------------------------------------
             
-                
-            {   //Emanuella Albuquerque - 105
-                id: "class_200002",
-                date: "2025-11-26T00:00:00",
-                //date: "2025-11-26",
-                day: "Quarta-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "Continuação - 3 - Everyday Activities",
-                professor: "Prof. Ysabelle Davanse",
-                student: "Emanuella Albuquerque - 105",
-                studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
+            
             {   //Eliel Dário - 102
                 id: "class_200003",
                 date: "2025-11-27T00:00:00",
@@ -412,6 +427,21 @@ const masterSchedule = [
                 professor: "Prof. Ysabelle Davanse",
                 student: "Eliel Dário - 102",
                 studentId: 102,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+            {   //Emanuella Albuquerque - 105
+                id: "class_200002",
+                date: "2025-11-26T00:00:00",
+                //date: "2025-11-26",
+                day: "Quarta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "(Done)",
+                professor: "Prof. Ysabelle Davanse",
+                student: "Emanuella Albuquerque - 105",
+                studentId: 105,
                 duration: "25min",
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
