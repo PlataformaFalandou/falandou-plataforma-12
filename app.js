@@ -149,7 +149,7 @@ const studentsDatabase = [
                 //studentId: 104,
                 duration: "50min",
                 status: "scheduled",
-                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
             },
             {   //Gabriel Arruda - 104 - N 6
                 //id: "class_008",
@@ -164,7 +164,7 @@ const studentsDatabase = [
                 //studentId: 104,
                 duration: "50min",
                 status: "scheduled",
-                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
             },
         ]
     },
