@@ -151,6 +151,21 @@ const studentsDatabase = [
                 status: "scheduled",
                 meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
             },
+            {   //Gabriel Arruda - 104 - N 6
+                //id: "class_008",
+                //date: "2025-11-27T00:00:00",
+                date: "2025-11-27",
+                day: "Quinta-feira",
+                time: "15:00",
+                timezone: "Brasília",
+                topic: "Continuação - 6 - City Locations",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+            },
         ]
     },
     {   //Emanuella Albuquerque - 105 - N 4
