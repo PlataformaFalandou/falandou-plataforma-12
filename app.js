@@ -453,7 +453,7 @@ const masterSchedule = [
                 studentId: 104,
                 duration: "50min",
                 status: "scheduled",
-                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
             },
             {   //Gabriel Arruda - 104 - N 6
                 id: "class_100002",
@@ -468,7 +468,7 @@ const masterSchedule = [
                 studentId: 104,
                 duration: "50min",
                 status: "scheduled",
-                meetLink: "//https://meet.google.com/yxk-wvhb-qgs"
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
             },
 
     // Prof. Ysabelle Davanse classes ONLY - id class_200001 ------------------------------------------------------------------------------
