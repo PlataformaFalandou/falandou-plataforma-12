@@ -97,7 +97,7 @@ const studentsDatabase = [
                 day: "Quinta-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
+                topic: "(Ausente)",
                 professor: "Prof. Ysabelle Davanse",
                 //student: "Eliel Dário - 102",
                 //studentId: 102,
@@ -133,24 +133,9 @@ const studentsDatabase = [
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 3
+            "50_min_classes": 2
         },
         weekly_schedule: [
-            {   //Gabriel Arruda - 104 - N 6
-                //id: "class_008",
-                //date: "2025-11-26T00:00:00",
-                date: "2025-11-26",
-                day: "Quarta-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "Continuação - 6 - City Locations",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Gabriel Arruda",
-                //studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
             {   //Gabriel Arruda - 104 - N 6
                 //id: "class_008",
                 //date: "2025-11-27T00:00:00",
@@ -178,11 +163,26 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2025-11-29",
         credits: {
-            "25_min_classes": 5,
+            "25_min_classes": 4,
             "50_min_classes": 0
         },
         weekly_schedule: [
             
+            {   //Emanuella Albuquerque - 105
+                //id: "class_008",
+                //date: "2025-12-04T00:00:00",
+                date: "2025-12-04",
+                day: "Quinta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "4 - Daily Schedule",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Emanuella Albuquerque",
+                //studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },            
             {   //Emanuella Albuquerque - 105
                 //id: "class_008",
                 //date: "2025-11-27T00:00:00",
@@ -190,7 +190,7 @@ const studentsDatabase = [
                 day: "Quinta-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "4 - Daily Schedule",
+                topic: "(Ausente)",
                 professor: "Prof. Adriel Pelegrino",
                 //student: "Emanuella Albuquerque",
                 //studentId: 105,
@@ -231,7 +231,7 @@ const studentsDatabase = [
         ]
     },
     {   //Ester Augusto - 106 - N 1
-        id: 105,
+        id: 106,
         registration_number: "106",
         password: "Augusto1254",
         name: "Ester Augusto",
@@ -240,10 +240,26 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2025-12-13",
         credits: {
-            "25_min_classes": 3,
+            "25_min_classes": 2,
             "50_min_classes": 0
         },
-        weekly_schedule: []
+        weekly_schedule: [            
+            {   //Ester Augusto - 106 - N 1
+                //id: "class_008",
+                //date: "2025-12-01T00:00:00",
+                date: "2025-12-01",
+                day: "Segunda-feira",
+                time: "20:00",
+                timezone: "Brasília",
+                topic: "1 - Presenting Yourself",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Ester Augusto",
+                //studentId: 106,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+        ]
     },
     {
         id: 40000,
@@ -362,6 +378,37 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
     
             
+                        
+            {   //Ester Augusto - 106 - N 1
+                id: "class_100005",
+                date: "2025-12-01T00:00:00",
+                //date: "2025-12-01",
+                day: "Segunda-feira",
+                time: "20:00",
+                timezone: "Brasília",
+                topic: "1 - Presenting Yourself",
+                professor: "Prof. Adriel Pelegrino",
+                student: "Ester Augusto",
+                studentId: 106,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+            {   //Emanuella Albuquerque - 105
+                id: "class_100004",
+                date: "2025-12-04T00:00:00",
+                //date: "2025-12-04",
+                day: "Quinta-feira",
+                time: "10:00",
+                timezone: "Brasília",
+                topic: "4 - Daily Schedule",
+                professor: "Prof. Adriel Pelegrino",
+                student: "Emanuella Albuquerque",
+                studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
             {   //Emanuella Albuquerque - 105
                 id: "class_100003",
                 date: "2025-11-27T00:00:00",
@@ -534,7 +581,7 @@ const courseData = {
                     id: "lesson3",
                     title: "2 - Personal Possessions - Podcast Style",
                     description: "Talking about items you own using simple vocabulary",
-                    videoId: "1137316413",
+                    videoId: "1138285549",
                     duration: "35:38",
                     difficulty: "basico",
                     status: "available"
