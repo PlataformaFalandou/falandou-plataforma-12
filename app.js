@@ -76,7 +76,7 @@ const studentsDatabase = [
     // Alunos ---------------------------------------------------------------------
     //Estudantes ------------------------------------------------------------------
     
-    {   //Eliel Dário - 102
+    {   //Eliel Dário - 102 - N 1
         id: 102,
         registration_number: "102",
         password: "dario5990",
@@ -86,10 +86,26 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2026-11-30",
         credits: {
-            "25_min_classes": 15,
+            "25_min_classes": 14,
             "50_min_classes": 0
         },
         weekly_schedule: [
+            
+            {   //Eliel Dário - 102 - N 1
+                //id: "class_008",
+                //date: "2025-12-01T00:00:00",
+                date: "2025-12-01",
+                day: "Segunda-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "1 - Presenting Yourself",
+                professor: "Prof. Ysabelle Davanse",
+                //student: "Eliel Dário - 102",
+                //studentId: 102,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
             {   //Eliel Dário - 102
                 //id: "class_008",
                 //date: "2025-11-27T00:00:00",
@@ -463,6 +479,21 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
             
             
+            {   //Eliel Dário - 102 - N 1
+                id: "class_200004",
+                date: "2025-12-01T00:00:00",
+                //date: "2025-12-01",
+                day: "Segunda-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "1 - Presenting Yourself",
+                professor: "Prof. Ysabelle Davanse",
+                student: "Eliel Dário - 102",
+                studentId: 102,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
             {   //Eliel Dário - 102
                 id: "class_200003",
                 date: "2025-11-27T00:00:00",
@@ -470,7 +501,7 @@ const masterSchedule = [
                 day: "Quinta-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
+                topic: "Ausente (Done)",
                 professor: "Prof. Ysabelle Davanse",
                 student: "Eliel Dário - 102",
                 studentId: 102,
@@ -502,7 +533,7 @@ const masterSchedule = [
                 timezone: "Brasília",
                 topic: "Ausente (Done)",
                 professor: "Prof. Ysabelle Davanse",
-                student: "Emanuella Albuquerque",
+                student: "Emanuella Albuquerque - 105",
                 studentId: 105,
                 duration: "25min",
                 status: "scheduled",
