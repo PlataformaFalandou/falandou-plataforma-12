@@ -86,19 +86,19 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2026-11-30",
         credits: {
-            "25_min_classes": 14,
+            "25_min_classes": 13,
             "50_min_classes": 0
         },
         weekly_schedule: [
             
             {   //Eliel Dário - 102 - N 1
                 //id: "class_008",
-                //date: "2025-12-01T00:00:00",
-                date: "2025-12-01",
+                //date: "2025-12-08T00:00:00",
+                date: "2025-12-08",
                 day: "Segunda-feira",
                 time: "16:00",
                 timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
+                topic: "2 - Personal Possessions",
                 professor: "Prof. Ysabelle Davanse",
                 //student: "Eliel Dário - 102",
                 //studentId: 102,
@@ -481,19 +481,34 @@ const masterSchedule = [
             
             
             {   //Eliel Dário - 102 - N 1
-                id: "class_200004",
-                date: "2025-12-01T00:00:00",
-                //date: "2025-12-01",
+                id: "class_200002",
+                date: "2025-12-08T00:00:00",
+                //date: "2025-12-08",
                 day: "Segunda-feira",
                 time: "16:00",
                 timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
+                topic: "2 - Personal Possessions",
                 professor: "Prof. Ysabelle Davanse",
                 student: "Eliel Dário - 102",
                 studentId: 102,
                 duration: "25min",
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+            {   //Eliel Dário - 102 - N 1
+                id: "class_200001",
+                date: "2025-12-01T00:00:00",
+                //date: "2025-12-01",
+                day: "Segunda-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "(Done)",
+                professor: "Prof. Ysabelle Davanse",
+                student: "Eliel Dário - 102",
+                studentId: 102,
+                duration: "25min",
+                status: "scheduled",
+                //meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
     
     // Prof. Ana Silva classes ONLY---------------------------------------------------------------------------------
