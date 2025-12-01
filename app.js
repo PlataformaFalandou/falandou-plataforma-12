@@ -106,21 +106,6 @@ const studentsDatabase = [
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
-            {   //Eliel Dário - 102
-                //id: "class_008",
-                //date: "2025-11-27T00:00:00",
-                date: "2025-11-27",
-                day: "Quinta-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "(Ausente)",
-                professor: "Prof. Ysabelle Davanse",
-                //student: "Eliel Dário - 102",
-                //studentId: 102,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
         ]
     },
     {   //Nelsita de Conto - 103
