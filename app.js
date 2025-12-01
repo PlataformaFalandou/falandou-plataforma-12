@@ -154,12 +154,28 @@ const studentsDatabase = [
         weekly_schedule: [
             {   //Gabriel Arruda - 104 - N 6
                 //id: "class_008",
-                //date: "2025-11-27T00:00:00",
-                date: "2025-11-27",
-                day: "Quinta-feira",
-                time: "15:00",
+                //date: "2025-12-02T00:00:00",
+                date: "2025-12-02",
+                day: "Terça-feira",
+                time: "16:00",
                 timezone: "Brasília",
-                topic: "Continuação - 6 - City Locations",
+                topic: "8 - Weather Conditions",
+                professor: "Prof. Adriel Pelegrino",
+                //student: "Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+            
+            {   //Gabriel Arruda - 104 - N 6
+                //id: "class_008",
+                //date: "2025-12-04T00:00:00",
+                date: "2025-12-04",
+                day: "Quinta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "8 - Weather Conditions",
                 professor: "Prof. Adriel Pelegrino",
                 //student: "Gabriel Arruda",
                 //studentId: 104,
