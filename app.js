@@ -149,7 +149,7 @@ const studentsDatabase = [
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 2
+            "50_min_classes": 0
         },
         weekly_schedule: [
             {   //Gabriel Arruda - 104 - N 6
