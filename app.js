@@ -494,51 +494,6 @@ const masterSchedule = [
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
-            {   //Eliel Dário - 102
-                id: "class_200003",
-                date: "2025-11-27T00:00:00",
-                //date: "2025-11-27",
-                day: "Quinta-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "Ausente (Done)",
-                professor: "Prof. Ysabelle Davanse",
-                student: "Eliel Dário - 102",
-                studentId: 102,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
-            {   //Emanuella Albuquerque - 105
-                id: "class_200002",
-                date: "2025-11-26T00:00:00",
-                //date: "2025-11-26",
-                day: "Quarta-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "(Done)",
-                professor: "Prof. Ysabelle Davanse",
-                student: "Emanuella Albuquerque - 105",
-                studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
-            {   //Emanuella Albuquerque - 105
-                id: "class_200001",
-                date: "2025-11-24T00:00:00",
-                //date: "2025-11-24",
-                day: "Segunda-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "Ausente (Done)",
-                professor: "Prof. Ysabelle Davanse",
-                student: "Emanuella Albuquerque - 105",
-                studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
     
     // Prof. Ana Silva classes ONLY---------------------------------------------------------------------------------
     //  -----------------------------------------------------------------------------------------------------------------
