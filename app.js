@@ -260,23 +260,7 @@ const studentsDatabase = [
             "25_min_classes": 2,
             "50_min_classes": 0
         },
-        weekly_schedule: [            
-            {   //Ester Augusto - 106 - N 1
-                //id: "class_008",
-                //date: "2025-12-01T00:00:00",
-                date: "2025-12-01",
-                day: "Segunda-feira",
-                time: "20:00",
-                timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Ester Augusto",
-                //studentId: 106,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-        ]
+        weekly_schedule: []
     },
     {
         id: 40000,
