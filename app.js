@@ -108,7 +108,7 @@ const studentsDatabase = [
             },
         ]
     },
-    {   //Nelsita de Conto - 103
+    {   //Nelsita de Conto - 103 - N 6
         id: 103,
         registration_number: "103",
         password: "deconto2928",
@@ -119,9 +119,25 @@ const studentsDatabase = [
         plan_expiry: "2026-08-04",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 136
+            "50_min_classes": 135
         },
-        weekly_schedule: []
+        weekly_schedule: [
+            {   //Nelsita de Conto - 103 - N 6
+                //id: "class_008",
+                //date: "2025-12-04T00:00:00",
+                date: "2025-12-04",
+                day: "Quinta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "1 - Presenting Yourself",
+                professor: "Prof. Ysabelle Davanse",
+                //student: "103 - Nelsita de Conto",
+                //studentId: 103,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+        ]
     },
     {   //Gabriel Arruda - 104 - N 6
         id: 104,
@@ -130,45 +146,13 @@ const studentsDatabase = [
         name: "Gabriel Arruda",
         email: "ghenrique.info@gmail.com",
         user_type: "student",
-        plan_status: "active",
+        plan_status: "expired",
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
             "50_min_classes": 0
         },
-        weekly_schedule: [
-            {   //Gabriel Arruda - 104 - N 6
-                //id: "class_008",
-                //date: "2025-12-02T00:00:00",
-                date: "2025-12-02",
-                day: "Terça-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "8 - Weather Conditions",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Gabriel Arruda",
-                //studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-            
-            {   //Gabriel Arruda - 104 - N 6
-                //id: "class_008",
-                //date: "2025-12-04T00:00:00",
-                date: "2025-12-04",
-                day: "Quinta-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "8 - Weather Conditions",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Gabriel Arruda",
-                //studentId: 104,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-        ]
+        weekly_schedule: []
     },
     {   //Emanuella Albuquerque - 105 - N 4
         id: 105,
@@ -464,6 +448,21 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
             
             
+            {   //Nelsita de Conto - 103 - N 6
+                id: "class_200003",
+                date: "2025-12-04T00:00:00",
+                //date: "2025-12-04",
+                day: "Quinta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "1 - Presenting Yourself",
+                professor: "Prof. Ysabelle Davanse",
+                student: "103 - Nelsita de Conto",
+                studentId: 103,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
             {   //Eliel Dário - 102 - N 1
                 id: "class_200002",
                 date: "2025-12-08T00:00:00",
