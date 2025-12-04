@@ -121,23 +121,7 @@ const studentsDatabase = [
             "25_min_classes": 0,
             "50_min_classes": 135
         },
-        weekly_schedule: [
-            {   //Nelsita de Conto - 103 - N 6
-                //id: "class_008",
-                //date: "2025-12-04T00:00:00",
-                date: "2025-12-04",
-                day: "Quinta-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
-                professor: "Prof. Ysabelle Davanse",
-                //student: "103 - Nelsita de Conto",
-                //studentId: 103,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
-        ]
+        weekly_schedule: []
     },
     {   //Gabriel Arruda - 104 - N 6
         id: 104,
@@ -146,11 +130,11 @@ const studentsDatabase = [
         name: "Gabriel Arruda",
         email: "ghenrique.info@gmail.com",
         user_type: "student",
-        plan_status: "active",
+        plan_status: "expired",
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 0
+            "50_min_classes": 10
         },
         weekly_schedule: []
     },
@@ -176,7 +160,7 @@ const studentsDatabase = [
                 day: "Quinta-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "4 - Daily Schedule",
+                topic: "(concluída) 4 - Daily Schedule",
                 professor: "Prof. Adriel Pelegrino",
                 //student: "Emanuella Albuquerque",
                 //studentId: 105,
@@ -446,23 +430,8 @@ const masterSchedule = [
     //registration_number: "prof.YsabelleDavanse",
     //password: "prof.YsabelleDavanse2362",
     //  -----------------------------------------------------------------------------------------------------------------
+        
             
-            
-            {   //Nelsita de Conto - 103 - N 6
-                id: "class_200003",
-                date: "2025-12-04T00:00:00",
-                //date: "2025-12-04",
-                day: "Quinta-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "1 - Presenting Yourself",
-                professor: "Prof. Ysabelle Davanse",
-                student: "103 - Nelsita de Conto",
-                studentId: 103,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
             {   //Eliel Dário - 102 - N 1
                 id: "class_200002",
                 date: "2025-12-08T00:00:00",
@@ -475,6 +444,21 @@ const masterSchedule = [
                 student: "Eliel Dário - 102",
                 studentId: 102,
                 duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+            {   //Nelsita de Conto - 103 - N 6
+                id: "class_200003",
+                date: "2025-12-04T00:00:00",
+                //date: "2025-12-04",
+                day: "Quinta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "(Done)",
+                professor: "Prof. Ysabelle Davanse",
+                student: "103 - Nelsita de Conto",
+                studentId: 103,
+                duration: "50min",
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
