@@ -146,7 +146,7 @@ const studentsDatabase = [
         name: "Gabriel Arruda",
         email: "ghenrique.info@gmail.com",
         user_type: "student",
-        plan_status: "expired",
+        plan_status: "active",
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
