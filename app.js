@@ -108,7 +108,7 @@ const studentsDatabase = [
             },
         ]
     },
-    {   //Nelsita de Conto - 103 - N 6
+    {   //Nelsita de Conto - 103 - N 2
         id: 103,
         registration_number: "103",
         password: "deconto2928",
@@ -123,20 +123,51 @@ const studentsDatabase = [
         },
         weekly_schedule: []
     },
-    {   //Gabriel Arruda - 104 - N 6
+    {   //Gabriel Arruda - 104 - N 9
         id: 104,
         registration_number: "104",
         password: "arruda0914",
         name: "Gabriel Arruda",
         email: "ghenrique.info@gmail.com",
         user_type: "student",
-        plan_status: "expired",
+        plan_status: "active",
         plan_expiry: "2025-12-02",
         credits: {
             "25_min_classes": 0,
-            "50_min_classes": 10
+            "50_min_classes": 8
         },
-        weekly_schedule: []
+        weekly_schedule: [
+            {   //Gabriel Arruda - 104 - N 9
+                //id: "class_008",
+                //date: "2025-12-09T00:00:00",
+                date: "2025-12-09",
+                day: "Terça-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "9 - Telling Time",
+                professor: "prof. Adriel Pelegrino",
+                //student: "104 - Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+            {   //Gabriel Arruda - 104 - N 9
+                //id: "class_008",
+                //date: "2025-12-11T00:00:00",
+                date: "2025-12-11",
+                day: "Quinta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "9 - Telling Time",
+                professor: "prof. Adriel Pelegrino",
+                //student: "104 - Gabriel Arruda",
+                //studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+        ]
     },
     {   //Emanuella Albuquerque - 105 - N 4
         id: 105,
@@ -347,7 +378,37 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
     
             
-                        
+            
+            {   //Gabriel Arruda - 104 - N 9
+                id: "class_100007",
+                date: "2025-12-09T00:00:00",
+                date: "2025-12-09",
+                //day: "Terça-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "9 - Telling Time",
+                professor: "Prof. Adriel Pelegrino",
+                student: "104 - Gabriel Arruda",
+                studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },
+            {   //Gabriel Arruda - 104 - N 9
+                id: "class_100006",
+                date: "2025-12-11T00:00:00",
+                //date: "2025-12-11",
+                day: "Quinta-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "9 - Telling Time",
+                professor: "Prof. Adriel Pelegrino",
+                student: "104 - Gabriel Arruda",
+                studentId: 104,
+                duration: "50min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
+            },      
             {   //Ester Augusto - 106 - N 1
                 id: "class_100005",
                 date: "2025-12-01T00:00:00",
