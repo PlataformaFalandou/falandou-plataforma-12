@@ -43,7 +43,7 @@ const studentsDatabase = [
         registration_number: "prof.YsabelleDavanse",
         password: "prof.YsabelleDavanse2362",
         name: "Prof. Ysabelle Davanse",
-        email: "Ysabelle@falandou.com.br",
+        email: "ysabelledavanseprof@falandou.com",
         user_type: "professor",
         professor_id: "ysabelle_davanse",
         professor_name: "Prof. Ysabelle Davanse",
@@ -179,71 +179,26 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2025-11-29",
         credits: {
-            "25_min_classes": 4,
+            "25_min_classes": 3,
             "50_min_classes": 0
         },
         weekly_schedule: [
             
             {   //Emanuella Albuquerque - 105
                 //id: "class_008",
-                //date: "2025-12-04T00:00:00",
-                date: "2025-12-04",
-                day: "Quinta-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "(concluída) 4 - Daily Schedule",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Emanuella Albuquerque",
-                //studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },            
-            {   //Emanuella Albuquerque - 105
-                //id: "class_008",
-                //date: "2025-11-27T00:00:00",
-                date: "2025-11-27",
-                day: "Quinta-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "(Ausente)",
-                professor: "Prof. Adriel Pelegrino",
-                //student: "Emanuella Albuquerque",
-                //studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/yxk-wvhb-qgs"
-            },
-            {   //Emanuella Albuquerque - 105
-                //id: "class_008",
-                //date: "2025-11-26T00:00:00",
-                date: "2025-11-26",
+                //date: "2025-12-10T00:00:00",
+                date: "2025-12-10",
                 day: "Quarta-feira",
                 time: "10:00",
                 timezone: "Brasília",
-                topic: "(Concluída)",
+                topic: "5 - Meals and Drinks",
                 professor: "Prof. Ysabelle Davanse",
                 //student: "Emanuella Albuquerque",
                 //studentId: 105,
                 duration: "25min",
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
-            {   //Emanuella Albuquerque - 105
-                //id: "class_008",
-                //date: "2025-11-24T00:00:00",
-                date: "2025-11-24",
-                day: "Segunda-feira",
-                time: "10:00",
-                timezone: "Brasília",
-                topic: "(Ausente)",
-                professor: "Prof. Ysabelle Davanse",
-                //student: "Emanuella Albuquerque",
-                //studentId: 105,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
+            }, 
         ]
     },
     {   //Ester Augusto - 106 - N 1
@@ -508,35 +463,20 @@ const masterSchedule = [
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
-            {   //Nelsita de Conto - 103 - N 6
-                id: "class_200003",
-                date: "2025-12-04T00:00:00",
-                //date: "2025-12-04",
-                day: "Quinta-feira",
-                time: "16:00",
+            {   //Emanuella Albuquerque - 105
+                id: "class_200002",
+                date: "2025-12-10T00:00:00",
+                //date: "2025-12-10",
+                day: "Quarta-feira",
+                time: "10:00",
                 timezone: "Brasília",
-                topic: "(Done)",
+                topic: "5 - Meals and Drinks",
                 professor: "Prof. Ysabelle Davanse",
-                student: "103 - Nelsita de Conto",
-                studentId: 103,
-                duration: "50min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
-            {   //Eliel Dário - 102 - N 1
-                id: "class_200001",
-                date: "2025-12-01T00:00:00",
-                //date: "2025-12-01",
-                day: "Segunda-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "(Done)",
-                professor: "Prof. Ysabelle Davanse",
-                student: "Eliel Dário - 102",
-                studentId: 102,
+                student: "Emanuella Albuquerque",
+                studentId: 105,
                 duration: "25min",
                 status: "scheduled",
-                //meetLink: "https://meet.google.com/kws-qzan-jfx"
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
             },
     
     // Prof. Ana Silva classes ONLY---------------------------------------------------------------------------------
