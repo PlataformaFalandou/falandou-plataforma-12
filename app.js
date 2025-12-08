@@ -76,7 +76,7 @@ const studentsDatabase = [
     // Alunos ---------------------------------------------------------------------
     //Estudantes ------------------------------------------------------------------
     
-    {   //Eliel Dário - 102 - N 1
+    {   //Eliel Dário - 102 - N 3
         id: 102,
         registration_number: "102",
         password: "dario5990",
@@ -86,19 +86,19 @@ const studentsDatabase = [
         plan_status: "active",
         plan_expiry: "2026-11-30",
         credits: {
-            "25_min_classes": 13,
+            "25_min_classes": 12,
             "50_min_classes": 0
         },
         weekly_schedule: [
             
-            {   //Eliel Dário - 102 - N 1
+            {   //Eliel Dário - 102 - N 4
                 //id: "class_008",
-                //date: "2025-12-08T00:00:00",
-                date: "2025-12-08",
+                //date: "2025-12-19T00:00:00",
+                date: "2025-12-19",
                 day: "Segunda-feira",
                 time: "16:00",
                 timezone: "Brasília",
-                topic: "2 - Personal Possessions",
+                topic: "3 - Everyday Activities",
                 professor: "Prof. Ysabelle Davanse",
                 //student: "Eliel Dário - 102",
                 //studentId: 102,
@@ -448,21 +448,6 @@ const masterSchedule = [
     //  -----------------------------------------------------------------------------------------------------------------
         
             
-            {   //Eliel Dário - 102 - N 1
-                id: "class_200002",
-                date: "2025-12-08T00:00:00",
-                //date: "2025-12-08",
-                day: "Segunda-feira",
-                time: "16:00",
-                timezone: "Brasília",
-                topic: "2 - Personal Possessions",
-                professor: "Prof. Ysabelle Davanse",
-                student: "Eliel Dário - 102",
-                studentId: 102,
-                duration: "25min",
-                status: "scheduled",
-                meetLink: "https://meet.google.com/kws-qzan-jfx"
-            },
             {   //Emanuella Albuquerque - 105
                 id: "class_200002",
                 date: "2025-12-10T00:00:00",
@@ -472,8 +457,38 @@ const masterSchedule = [
                 timezone: "Brasília",
                 topic: "5 - Meals and Drinks",
                 professor: "Prof. Ysabelle Davanse",
-                student: "Emanuella Albuquerque",
+                student: "Emanuella Albuquerque - 105",
                 studentId: 105,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },           
+            {   //Eliel Dário - 102 - N 4
+                id: "class_200003",
+                date: "2025-12-19T00:00:00",
+                //date: "2025-12-19",
+                day: "Segunda-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "3 - Everyday Activities",
+                professor: "Prof. Ysabelle Davanse",
+                student: "Eliel Dário - 102",
+                studentId: 102,
+                duration: "25min",
+                status: "scheduled",
+                meetLink: "https://meet.google.com/kws-qzan-jfx"
+            },
+            {   //Eliel Dário - 102 - N 1
+                id: "class_200001",
+                date: "2025-12-08T00:00:00",
+                //date: "2025-12-08",
+                day: "Segunda-feira",
+                time: "16:00",
+                timezone: "Brasília",
+                topic: "(Done)",
+                professor: "Prof. Ysabelle Davanse",
+                student: "Eliel Dário - 102",
+                studentId: 102,
                 duration: "25min",
                 status: "scheduled",
                 meetLink: "https://meet.google.com/kws-qzan-jfx"
